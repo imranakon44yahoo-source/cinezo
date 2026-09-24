@@ -1,0 +1,2 @@
+# cinezo
+Cinezo - Entertainment Platform
