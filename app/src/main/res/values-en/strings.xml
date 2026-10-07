@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pashe</string>
+    <string name="tagline">By your parents\' side, even from afar</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="back">Back</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_offline">No internet connection. Try again once you are back online.</string>
+
+    <string name="disclaimer_title">Important</string>
+    <string name="disclaimer_body">Pashe is only a reminder tool. It does not give medical advice.\n\nAlways follow your doctor\'s instructions about which medicine to take, how much, and when. The app cannot tell if a medicine name or time was entered incorrectly, so enter details carefully.\n\nIn an emergency, contact a doctor or the nearest hospital without delay.</string>
+    <string name="disclaimer_accept">I understand, continue</string>
+
+    <string name="mode_title">Who are you?</string>
+    <string name="mode_child">I\'m the child</string>
+    <string name="mode_child_desc">Set up medicine schedules and keep track</string>
+    <string name="mode_parent">I\'m the parent</string>
+    <string name="mode_parent_desc">Get reminded when it\'s time for medicine</string>
+
+    <string name="signin_title">Sign in</string>
+    <string name="signin_subtitle">With your phone number or Google account</string>
+    <string name="phone_label">Phone number (with country code)</string>
+    <string name="phone_hint">+447XXXXXXXXX</string>
+    <string name="send_code">Send code</string>
+    <string name="otp_label">6-digit code from SMS</string>
+    <string name="verify">Verify</string>
+    <string name="change_number">Change number</string>
+    <string name="google_signin">Sign in with Google</string>
+    <string name="or">or</string>
+    <string name="signin_error">Could not sign in: %1$s</string>
+
+    <string name="dashboard_title">Today\'s medicines</string>
+    <string name="add_parent">Add parent</string>
+    <string name="no_parents">No one added yet. Tap the button below to add your mother or father.</string>
+    <string name="no_doses_today">No medicines today</string>
+    <string name="status_taken">Taken ✅</string>
+    <string name="status_pending">Pending ⏳</string>
+    <string name="status_missed">Missed ❌</string>
+    <string name="their_time">Their time</string>
+    <string name="your_time">Your time</string>
+    <string name="today_summary">%1$s of %2$s taken today</string>
+    <string name="settings">Settings</string>
+
+    <string name="add_parent_title">Add parent</string>
+    <string name="edit_parent_title">Edit details</string>
+    <string name="parent_name">Name</string>
+    <string name="relation">Relation</string>
+    <string name="relation_mother">Amma (mother)</string>
+    <string name="relation_father">Abba (father)</string>
+    <string name="relation_other">Other</string>
+    <string name="timezone">Their timezone</string>
+    <string name="timezone_search">Search (e.g. Dhaka, London)</string>
+    <string name="delete_parent">Delete this profile</string>
+    <string name="delete_parent_confirm">This profile, all its medicines and history will be deleted. Are you sure?</string>
+    <string name="name_required">Enter a name</string>
+
+    <string name="medicines">Medicines</string>
+    <string name="add_medicine">Add medicine</string>
+    <string name="no_medicines">No medicines added yet</string>
+    <string name="pairing_title">Link your parent\'s phone</string>
+    <string name="pairing_desc">Install Pashe on their phone, choose \"I\'m the parent\", then enter this code.</string>
+    <string name="generate_code">Generate new code</string>
+    <string name="code_valid_until">Code valid until %1$s</string>
+    <string name="device_linked">✓ Phone linked</string>
+    <string name="device_not_linked">Phone not linked yet</string>
+    <string name="history_7days">7-day history</string>
+    <string name="delete_medicine_confirm">Delete \"%1$s\"?</string>
+    <string name="inactive">Paused</string>
+
+    <string name="add_medicine_title">New medicine</string>
+    <string name="edit_medicine_title">Edit medicine</string>
+    <string name="medicine_name">Medicine name</string>
+    <string name="medicine_name_hint">e.g. Blood pressure (Amlodipine)</string>
+    <string name="dose_label">Dose</string>
+    <string name="dose_hint">e.g. ১টা ট্যাবলেট (1 tablet)</string>
+    <string name="meal_before">Before meal</string>
+    <string name="meal_after">After meal</string>
+    <string name="times_label">Times per day</string>
+    <string name="add_time">Add time</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date (optional)</string>
+    <string name="end_date_none">Ongoing</string>
+    <string name="note">Note (optional)</string>
+    <string name="active">Active</string>
+    <string name="need_time_error">Add at least one time</string>
+    <string name="need_name_error">Enter the medicine name</string>
+    <string name="end_before_start_error">End date cannot be before the start date</string>
+    <string name="times_in_parent_zone">Times are in their timezone (%1$s)</string>
+
+    <string name="history_title">7-day history</string>
+    <string name="adherence">Adherence</string>
+    <string name="adherence_value">%1$s%%</string>
+    <string name="adherence_none">—</string>
+    <string name="taken_count">Taken %1$s</string>
+    <string name="missed_count">Missed %1$s</string>
+
+    <string name="language">Language</string>
+    <string name="language_bn">বাংলা</string>
+    <string name="language_en">English</string>
+    <string name="your_name">Your name</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="about_disclaimer">Important note about the app</string>
+    <string name="seed_data">Add sample data for testing</string>
+    <string name="seed_done">Sample data added</string>
+    <string name="sign_out">Sign out</string>
+    <string name="version">Version %1$s</string>
+
+    <!-- Parent mode always runs in Bengali; English copies exist only so lint is satisfied. -->
+    <string name="pair_title">Enter the code from your child</string>
+    <string name="pair_desc">Your son or daughter has a 6-digit code on their phone. Enter it here.</string>
+    <string name="pair_button">Link</string>
+    <string name="pair_error_invalid">Code is wrong or expired. Ask your child for a new code.</string>
+    <string name="pair_change_mode">I\'m the child, go back</string>
+    <string name="perm_title">A few permissions are needed</string>
+    <string name="perm_desc">To remind on time, the phone needs a few permissions.</string>
+    <string name="perm_notifications_title">Notifications</string>
+    <string name="perm_notifications_desc">To show a message when it\'s medicine time.</string>
+    <string name="perm_exact_title">Exact alarms</string>
+    <string name="perm_exact_desc">To ring exactly on time.</string>
+    <string name="perm_fullscreen_title">Lock screen alarm</string>
+    <string name="perm_fullscreen_desc">To show the alarm full screen even when locked.</string>
+    <string name="perm_battery_title">Battery saver exemption</string>
+    <string name="perm_battery_desc">So the phone does not stop alarms to save battery.</string>
+    <string name="perm_allow">Allow</string>
+    <string name="perm_done">✓ Allowed</string>
+    <string name="perm_continue">Start</string>
+    <string name="parent_home_title">Today\'s medicines</string>
+    <string name="parent_none_today">No medicines today.\nStay well.</string>
+    <string name="taken_btn">Taken ✓</string>
+    <string name="snooze_btn">Remind me in 10 minutes</string>
+    <string name="parent_status_taken">Taken ✓</string>
+    <string name="parent_status_pending">Pending</string>
+    <string name="parent_status_missed">Not taken</string>
+    <string name="parent_perm_banner">Some permissions are missing for alarms. Tap here.</string>
+
+    <string name="alarm_title">Medicine time</string>
+    <string name="channel_alarms">Medicine alarms</string>
+    <string name="channel_alarms_desc">Rings loudly at medicine time</string>
+    <string name="channel_missed">Missed doses</string>
+    <string name="channel_missed_desc">Alerts when a parent misses a dose</string>
+</resources>
