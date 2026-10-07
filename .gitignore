@@ -6,7 +6,6 @@ local.properties
 .DS_Store
 captures/
 .kotlin/
-app/google-services.json
 functions/node_modules/
 functions/lib/
 functions/service-account*.json

@@ -23,6 +23,17 @@ android {
         versionName = "1.0.0"
     }
 
+    // A fixed, committed debug key so builds from CI and every computer share one SHA-1, which
+    // Firebase phone auth and Google sign-in need. Never use it for Play Store releases.
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true

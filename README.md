@@ -71,8 +71,14 @@ and are redeemed only by the function (rate limited to 10 tries per device per h
 
 1. Create a Firebase project. Enable **Authentication** → Phone, Google and Anonymous providers;
    **Firestore**; **Cloud Messaging**. Cloud Functions with scheduled jobs need the Blaze plan.
-2. Add an Android app with package `com.pashe.app` and your debug/release SHA-1 and SHA-256
-   (required for Phone auth and Google sign-in). Download `google-services.json` into `app/`.
+2. Add an Android app with package `com.pashe.app` and the SHA-1/SHA-256 of the committed debug key
+   `app/debug.keystore` (required for Phone auth and Google sign-in):
+   - SHA-1 `EE:75:21:E8:EE:32:F4:30:6E:A2:39:F8:90:12:A5:65:18:5B:11:B1`
+   - SHA-256 `47:EA:5A:9C:15:C8:AF:B6:2D:C7:B8:64:33:43:D9:9B:A8:E6:2B:0D:1B:89:86:41:52:2C:CE:30:E0:8A:2A:BB`
+
+   Add your release key's fingerprints too before publishing. Download `google-services.json` into
+   `app/` (it can be uploaded through GitHub's web UI; it identifies the project and is not a secret,
+   access is enforced by the security rules). Every CI run uploads an installable `pashe-debug-apk`.
    The Gradle build applies the google-services plugin only when that file exists; without it the
    app starts on a "Firebase is not configured" screen.
 3. Set your project id in `.firebaserc`, then deploy:
