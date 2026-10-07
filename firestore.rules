@@ -1,0 +1,84 @@
+rules_version = '2';
+
+// Children (signed in with phone/Google) manage only parents whose childIds contain them.
+// A parent phone (anonymous auth) is bound via parents/{id}.deviceUid by the redeemPairingCode
+// function and may only read its own schedule and mark its own doses as taken.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function parentDoc(parentId) { return get(/databases/$(database)/documents/parents/$(parentId)); }
+    function isChildOf(parentId) { return signedIn() && request.auth.uid in parentDoc(parentId).data.childIds; }
+    function isDeviceOf(parentId) { return signedIn() && parentDoc(parentId).data.get('deviceUid', null) == request.auth.uid; }
+
+    match /users/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    match /parents/{parentId} {
+      allow read: if signedIn() && (
+        request.auth.uid in resource.data.childIds ||
+        resource.data.get('deviceUid', null) == request.auth.uid);
+
+      // Only the creator can be the first child, and devices are linked only by the function.
+      allow create: if signedIn()
+        && request.resource.data.childIds == [request.auth.uid]
+        && !('deviceUid' in request.resource.data);
+
+      allow update: if signedIn() && (
+        // A child may edit the profile but not link a device, and must stay a member.
+        (request.auth.uid in resource.data.childIds
+          && request.auth.uid in request.resource.data.childIds
+          && request.resource.data.get('deviceUid', null) == resource.data.get('deviceUid', null))
+        ||
+        // The linked phone may only refresh its push token.
+        (resource.data.get('deviceUid', null) == request.auth.uid
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['deviceToken', 'deviceUpdatedAt']))
+      );
+
+      allow delete: if signedIn() && request.auth.uid in resource.data.childIds;
+
+      match /medicines/{medId} {
+        allow read: if isChildOf(parentId) || isDeviceOf(parentId);
+        allow write: if isChildOf(parentId);
+      }
+
+      match /doses/{doseId} {
+        allow read: if isChildOf(parentId) || isDeviceOf(parentId);
+        allow delete: if isChildOf(parentId);
+
+        // The phone may create or update a dose only to mark it taken (also late, after "missed").
+        allow create: if isDeviceOf(parentId)
+          && request.resource.data.keys().hasOnly(['medId', 'scheduledAt', 'status', 'confirmedAt', 'syncedAt'])
+          && request.resource.data.status == 'taken'
+          && request.resource.data.scheduledAt is timestamp
+          && request.resource.data.confirmedAt is timestamp;
+        allow update: if isDeviceOf(parentId)
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['medId', 'scheduledAt', 'status', 'confirmedAt', 'syncedAt'])
+          && request.resource.data.status == 'taken'
+          && request.resource.data.medId == resource.data.medId
+          && request.resource.data.scheduledAt == resource.data.scheduledAt;
+
+        // Children may correct a status by hand (e.g. after a phone call).
+        allow create, update: if isChildOf(parentId)
+          && request.resource.data.status in ['pending', 'taken', 'missed'];
+      }
+    }
+
+    match /pairingCodes/{code} {
+      // Codes are only redeemed through the Cloud Function, never read by parent phones.
+      allow read: if signedIn() && isChildOf(resource.data.parentId);
+      // Create-only: an existing code (a collision) is an update and is refused.
+      allow create: if signedIn()
+        && code.matches('^[0-9]{6}$')
+        && request.resource.data.keys().hasOnly(['parentId', 'expiresAt', 'createdBy'])
+        && request.resource.data.createdBy == request.auth.uid
+        && isChildOf(request.resource.data.parentId)
+        && request.resource.data.expiresAt is timestamp
+        && request.resource.data.expiresAt <= request.time + duration.value(24, 'h') + duration.value(5, 'm');
+      allow delete: if signedIn() && isChildOf(resource.data.parentId);
+    }
+
+    // pairingAttempts is server-only.
+  }
+}

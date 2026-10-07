@@ -1,0 +1,13 @@
+{
+  "name": "pashe-rules-test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "firebase emulators:exec --only firestore --project demo-pashe --config ../firebase.json \"node --test rules.test.mjs\""
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^4.0.1",
+    "firebase": "^11.6.0",
+    "firebase-tools": "^14.2.0"
+  }
+}

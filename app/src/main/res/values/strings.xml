@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">পাশে</string>
+    <string name="tagline">দূরে থেকেও বাবা-মায়ের পাশে</string>
+
+    <string name="ok">ঠিক আছে</string>
+    <string name="cancel">বাতিল</string>
+    <string name="save">সংরক্ষণ করুন</string>
+    <string name="delete">মুছে ফেলুন</string>
+    <string name="edit">সম্পাদনা</string>
+    <string name="back">পিছনে</string>
+    <string name="error_generic">কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করুন।</string>
+    <string name="error_offline">ইন্টারনেট সংযোগ নেই। সংযোগ ফিরলে আবার চেষ্টা করুন।</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">জরুরি কথা</string>
+    <string name="disclaimer_body">“পাশে” শুধু ওষুধ মনে করিয়ে দেওয়ার একটি সহায়ক অ্যাপ। এটি কোনো চিকিৎসা পরামর্শ দেয় না।\n\nকোন ওষুধ, কতটুকু এবং কখন খাবেন — সবসময় ডাক্তারের পরামর্শ মেনে চলুন। ওষুধের নাম বা সময় ভুল লেখা হলে অ্যাপ সেটা বুঝতে পারবে না, তাই সাবধানে তথ্য দিন।\n\nজরুরি অবস্থায় দেরি না করে ডাক্তার বা নিকটস্থ হাসপাতালে যোগাযোগ করুন।</string>
+    <string name="disclaimer_accept">বুঝেছি, এগিয়ে যাই</string>
+
+    <!-- Mode selection -->
+    <string name="mode_title">আপনি কে?</string>
+    <string name="mode_child">আমি সন্তান</string>
+    <string name="mode_child_desc">বাবা-মায়ের ওষুধের সময় ঠিক করব, খোঁজ রাখব</string>
+    <string name="mode_parent">আমি বাবা/মা</string>
+    <string name="mode_parent_desc">ওষুধ খাওয়ার সময় হলে মনে করিয়ে দেবে</string>
+
+    <!-- Child sign in -->
+    <string name="signin_title">সাইন ইন করুন</string>
+    <string name="signin_subtitle">আপনার মোবাইল নম্বর বা Google অ্যাকাউন্ট দিয়ে</string>
+    <string name="phone_label">মোবাইল নম্বর (দেশের কোডসহ)</string>
+    <string name="phone_hint">+8801XXXXXXXXX</string>
+    <string name="send_code">কোড পাঠান</string>
+    <string name="otp_label">SMS-এ আসা ৬ সংখ্যার কোড</string>
+    <string name="verify">যাচাই করুন</string>
+    <string name="change_number">নম্বর বদলান</string>
+    <string name="google_signin">Google দিয়ে সাইন ইন</string>
+    <string name="or">অথবা</string>
+    <string name="signin_error">সাইন ইন করা যায়নি: %1$s</string>
+
+    <!-- Child dashboard -->
+    <string name="dashboard_title">আজকের ওষুধ</string>
+    <string name="add_parent">বাবা/মা যোগ করুন</string>
+    <string name="no_parents">এখনো কাউকে যোগ করা হয়নি। নিচের বোতাম চেপে বাবা বা মাকে যোগ করুন।</string>
+    <string name="no_doses_today">আজ কোনো ওষুধ নেই</string>
+    <string name="status_taken">খেয়েছেন ✅</string>
+    <string name="status_pending">বাকি ⏳</string>
+    <string name="status_missed">মিস হয়েছে ❌</string>
+    <string name="their_time">ওখানে</string>
+    <string name="your_time">আপনার সময়</string>
+    <string name="today_summary">আজ %1$s/%2$s টি খেয়েছেন</string>
+    <string name="settings">সেটিংস</string>
+
+    <!-- Parent profile -->
+    <string name="add_parent_title">বাবা/মা যোগ করুন</string>
+    <string name="edit_parent_title">তথ্য সম্পাদনা</string>
+    <string name="parent_name">নাম</string>
+    <string name="relation">সম্পর্ক</string>
+    <string name="relation_mother">আম্মা</string>
+    <string name="relation_father">আব্বা</string>
+    <string name="relation_other">অন্যান্য</string>
+    <string name="timezone">ওঁদের টাইমজোন</string>
+    <string name="timezone_search">খুঁজুন (যেমন Dhaka, London)</string>
+    <string name="delete_parent">এই প্রোফাইল মুছুন</string>
+    <string name="delete_parent_confirm">এই প্রোফাইল, সব ওষুধ ও ইতিহাস মুছে যাবে। নিশ্চিত?</string>
+    <string name="name_required">নাম লিখুন</string>
+
+    <!-- Parent detail -->
+    <string name="medicines">ওষুধের তালিকা</string>
+    <string name="add_medicine">ওষুধ যোগ করুন</string>
+    <string name="no_medicines">এখনো কোনো ওষুধ যোগ করা হয়নি</string>
+    <string name="pairing_title">বাবা/মায়ের ফোন যুক্ত করুন</string>
+    <string name="pairing_desc">ওঁদের ফোনে “পাশে” ইনস্টল করে “আমি বাবা/মা” বেছে নিন, তারপর এই কোডটি দিন।</string>
+    <string name="generate_code">নতুন কোড তৈরি করুন</string>
+    <string name="code_valid_until">কোডটি %1$s পর্যন্ত চলবে</string>
+    <string name="device_linked">✓ ফোন যুক্ত আছে</string>
+    <string name="device_not_linked">ফোন এখনো যুক্ত হয়নি</string>
+    <string name="history_7days">৭ দিনের ইতিহাস</string>
+    <string name="delete_medicine_confirm">“%1$s” ওষুধটি মুছে ফেলবেন?</string>
+    <string name="inactive">বন্ধ আছে</string>
+
+    <!-- Medicine editor -->
+    <string name="add_medicine_title">নতুন ওষুধ</string>
+    <string name="edit_medicine_title">ওষুধ সম্পাদনা</string>
+    <string name="medicine_name">ওষুধের নাম</string>
+    <string name="medicine_name_hint">যেমন: প্রেশারের ওষুধ (Amlodipine)</string>
+    <string name="dose_label">কতটুকু</string>
+    <string name="dose_hint">যেমন: ১টা ট্যাবলেট</string>
+    <string name="meal_before">খাবারের আগে</string>
+    <string name="meal_after">খাবারের পরে</string>
+    <string name="times_label">দিনে কখন কখন</string>
+    <string name="add_time">সময় যোগ করুন</string>
+    <string name="start_date">শুরুর তারিখ</string>
+    <string name="end_date">শেষের তারিখ (ঐচ্ছিক)</string>
+    <string name="end_date_none">চলতে থাকবে</string>
+    <string name="note">নোট (ঐচ্ছিক)</string>
+    <string name="active">চালু আছে</string>
+    <string name="need_time_error">অন্তত একটি সময় যোগ করুন</string>
+    <string name="need_name_error">ওষুধের নাম লিখুন</string>
+    <string name="end_before_start_error">শেষের তারিখ শুরুর আগে হতে পারে না</string>
+    <string name="times_in_parent_zone">সময়গুলো ওঁদের টাইমজোনে (%1$s)</string>
+
+    <!-- History -->
+    <string name="history_title">৭ দিনের ইতিহাস</string>
+    <string name="adherence">নিয়মিত খাওয়া</string>
+    <string name="adherence_value">%1$s%%</string>
+    <string name="adherence_none">—</string>
+    <string name="taken_count">খেয়েছেন %1$s</string>
+    <string name="missed_count">মিস %1$s</string>
+
+    <!-- Settings -->
+    <string name="language">ভাষা</string>
+    <string name="language_bn">বাংলা</string>
+    <string name="language_en">English</string>
+    <string name="your_name">আপনার নাম</string>
+    <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="about_disclaimer">অ্যাপ সম্পর্কে জরুরি কথা</string>
+    <string name="seed_data">টেস্টের জন্য নমুনা তথ্য যোগ করুন</string>
+    <string name="seed_done">নমুনা তথ্য যোগ হয়েছে</string>
+    <string name="sign_out">সাইন আউট</string>
+    <string name="version">সংস্করণ %1$s</string>
+
+    <!-- Parent mode: pairing -->
+    <string name="pair_title">সন্তানের দেওয়া কোড লিখুন</string>
+    <string name="pair_desc">আপনার ছেলে বা মেয়ের ফোনে ৬ সংখ্যার একটি কোড আছে। সেটি এখানে লিখুন।</string>
+    <string name="pair_button">যুক্ত করুন</string>
+    <string name="pair_error_invalid">কোডটি সঠিক নয় বা মেয়াদ শেষ। সন্তানের কাছ থেকে নতুন কোড নিন।</string>
+    <string name="pair_change_mode">আমি সন্তান, ভুল করে এসেছি</string>
+
+    <!-- Parent mode: permissions -->
+    <string name="perm_title">কয়েকটি অনুমতি দরকার</string>
+    <string name="perm_desc">সময়মতো ওষুধ মনে করিয়ে দিতে ফোনের কিছু অনুমতি লাগবে। প্রতিটি বোতাম চেপে “অনুমতি দিন”।</string>
+    <string name="perm_notifications_title">নোটিফিকেশন</string>
+    <string name="perm_notifications_desc">ওষুধের সময় হলে ফোনে বার্তা দেখাতে।</string>
+    <string name="perm_exact_title">ঠিক সময়ে অ্যালার্ম</string>
+    <string name="perm_exact_desc">এক মিনিটও দেরি না করে ঠিক সময়ে অ্যালার্ম বাজাতে।</string>
+    <string name="perm_fullscreen_title">লক স্ক্রিনে অ্যালার্ম</string>
+    <string name="perm_fullscreen_desc">ফোন লক থাকলেও পুরো স্ক্রিনে বড় করে অ্যালার্ম দেখাতে।</string>
+    <string name="perm_battery_title">ব্যাটারি সেভার থেকে ছাড়</string>
+    <string name="perm_battery_desc">ব্যাটারি বাঁচাতে গিয়ে ফোন যেন অ্যালার্ম বন্ধ করে না দেয়।</string>
+    <string name="perm_allow">অনুমতি দিন</string>
+    <string name="perm_done">✓ দেওয়া হয়েছে</string>
+    <string name="perm_continue">শুরু করুন</string>
+
+    <!-- Parent mode: home -->
+    <string name="parent_home_title">আজকের ওষুধ</string>
+    <string name="parent_none_today">আজ কোনো ওষুধ নেই।\nভালো থাকবেন।</string>
+    <string name="taken_btn">খেয়েছি ✓</string>
+    <string name="snooze_btn">১০ মিনিট পরে মনে করাও</string>
+    <string name="parent_status_taken">খেয়েছি ✓</string>
+    <string name="parent_status_pending">বাকি আছে</string>
+    <string name="parent_status_missed">খাওয়া হয়নি</string>
+    <string name="parent_perm_banner">অ্যালার্ম ঠিকমতো বাজার জন্য অনুমতি বাকি আছে। এখানে চাপুন।</string>
+
+    <!-- Alarm -->
+    <string name="alarm_title">ওষুধ খাওয়ার সময়</string>
+    <string name="channel_alarms">ওষুধের অ্যালার্ম</string>
+    <string name="channel_alarms_desc">ওষুধ খাওয়ার সময় হলে জোরে বাজবে</string>
+    <string name="channel_missed">মিস হওয়া ডোজ</string>
+    <string name="channel_missed_desc">বাবা-মা ওষুধ না খেলে জানাবে</string>
+</resources>

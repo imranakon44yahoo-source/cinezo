@@ -1,0 +1,25 @@
+{
+  "name": "pashe-functions",
+  "private": true,
+  "main": "lib/src/index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test lib/test/schedule.test.js",
+    "seed": "tsc && node lib/scripts/seed.js",
+    "deploy": "npm run build && firebase deploy --only functions",
+    "test:emulator": "tsc && ../rules-test/node_modules/.bin/firebase emulators:exec --only firestore --project demo-pashe --config ../firebase.json \"node --test lib/test/integration.test.js\""
+  },
+  "dependencies": {
+    "firebase-admin": "^13.4.0",
+    "firebase-functions": "^6.3.2",
+    "luxon": "^3.6.1"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.6.2",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
